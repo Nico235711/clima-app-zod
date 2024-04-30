@@ -1,0 +1,7 @@
+.alert {
+  background-color: #ad3636;
+  border-radius: .5rem;
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
