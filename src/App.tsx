@@ -1,4 +1,5 @@
 import styles from './App.module.css'
+import Alert from './components/Alert/Alert'
 import Form from './components/Form/Form'
 import Spinner from './components/Spinner/Spinner'
 import WeatherDetail from './components/WeatherDetail/WeatherDetail'
@@ -6,7 +7,7 @@ import useWeather from './hooks/useWeather'
 
 const App = () => {
 
-  const { weather, loading, fetchWeather } = useWeather()
+  const { weather, loading, notFound, fetchWeather } = useWeather()
 
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
         />
         
         {loading && <Spinner />}
+        {notFound && <Alert>Clima no encontrado</Alert>}
         {weather.name && <WeatherDetail weather={weather} />}
       </div>
     </>
