@@ -15,9 +15,7 @@ const App = () => {
           fetchWeather={fetchWeather}
         />
 
-        <WeatherDetail 
-          weather={weather}
-        />
+        {weather.name && <WeatherDetail weather={weather} />}
       </div>
     </>
   )
