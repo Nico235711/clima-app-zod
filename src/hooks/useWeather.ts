@@ -13,6 +13,7 @@ const WeatheSchema = z.object({
   })
 })
 
+// lo transforma a un type de TypeScript
 export type Weather = z.infer<typeof WeatheSchema>
 
 const initialState = {
